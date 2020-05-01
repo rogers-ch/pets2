@@ -12,11 +12,8 @@ $f3 = Base::instance();   //a Fat Free object
 
 //Define a default route
 $f3->route('GET /', function() {
-    echo '<h1>Hello world!</h1>';
-    echo '<a href="order">Order a Pet</a>';
-
-    //$view = new Template();
-    //echo $view->render('views/home.html');
+    $view = new Template();
+    echo $view->render('views/pet-home.html');
 });
 
 //Run fat free
