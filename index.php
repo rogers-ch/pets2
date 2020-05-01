@@ -42,13 +42,18 @@ $f3->route('GET|POST /order', function($f3)
             $f3->reroute("summary");
         }
     }
-    else
-    {
-        echo 'get method';
-    }
 
     $view = new Template();
     echo $view->render('views/pet-order.html');
+});
+
+//Summary route
+$f3->route('GET /summary', function() {
+    //echo '<h1>Welcome to my summary</h1>';
+
+    $view = new Template();
+    echo $view->render('views/order-summary.html');
+
 });
 
 //Run fat free
